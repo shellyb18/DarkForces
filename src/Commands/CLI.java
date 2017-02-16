@@ -37,6 +37,11 @@ public class CLI {
         }
     }
     
+    public void processString(String line){
+    
+    
+    }
+    
     public String nextString(){
         System.out.print(userName + ">  ");
         return scan.nextLine();
