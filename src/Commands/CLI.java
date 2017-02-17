@@ -37,21 +37,36 @@ public class CLI {
         }
     }
     
-    public void processString(String line){
-    
-    
-    }
+//    public void processString(String line){
+//        try{
+//        
+//        }catch{
+//        
+//        
+//        }
+//    
+//    
+//    }
     
     public String nextString(){
         System.out.print(userName + ">  ");
         return scan.nextLine();
     }
     
+    public void scanString(String str){
+        int length = str.length();
+        String[] words = str.split(" ");
+        System.out.println(words);
+            
+        }
+    
+    
+    }
     
     
     
 
-}
+
 
 
 
