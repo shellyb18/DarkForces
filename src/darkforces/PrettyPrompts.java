@@ -24,8 +24,8 @@ public class PrettyPrompts {
     public void prompt(){
         char [] firstUN = userName.toCharArray();
         char [] secondUN = userName2.toCharArray();
-        
-        
+        firstUN[0] = Character.toUpperCase(firstUN[0]);
+        secondUN[0] = Character.toUpperCase(secondUN[0]);
     
     }
     
