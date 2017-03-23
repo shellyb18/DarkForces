@@ -5,6 +5,7 @@
  */
 package darkforces;
 
+import static darkforces.ClientContext.WarningStatement;
 import java.util.Scanner;
 
 /**
@@ -14,28 +15,32 @@ import java.util.Scanner;
 public class DarkForces {
 
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         
         System.out.println("Welcome - do not do anything stupid.");
+        
+        WarningStatement();
 
         System.out.print("Enter your username: ");
-        String username = scanner.nextLine();
-        String myFriend = "Computer";
+        String userName = scanner.nextLine();
+        
+        PrettyPrompts prettyPrompts = new PrettyPrompts(userName, "Computer");
+        userName = prettyPrompts.prompt1();
+        String myFriend = prettyPrompts.prompt2();
         String myFriendsMessage = "";
 
         String input = "";
 
         do {
-            
-            System.out.print(username + " > ");
+
+            System.out.print(userName);
             input = scanner.nextLine();
-            
             myFriendsMessage = input;
-            System.out.println(myFriend + " > " + myFriendsMessage );
+            System.out.println(myFriend + myFriendsMessage);
 
         } while (!input.equalsIgnoreCase("Exit"));
 
     }
+
 
 }
